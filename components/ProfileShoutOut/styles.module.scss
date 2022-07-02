@@ -1,0 +1,46 @@
+@use "../../styles/media-queries.scss" as *;
+
+.shoutOutContainer {
+  transform: translate(0, -120%);
+  position: relative;
+  left: 47%;
+  width: 9.375rem;
+  .shoutOut {
+    width: 9.375rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.4em;
+    height: 5rem;
+    span {
+      position: relative;
+      top: 20%;
+      left: 5%;
+    }
+  }
+
+  .shoutOut:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 0.781em solid transparent;
+    border-right-color: rgba(255, 255, 255, 0.5);
+    border-left: 0;
+    margin-top: -0.781em;
+    margin-left: -0.781em;
+  }
+
+  @include phoneLandscape {
+    left: 30%;
+  }
+
+  @include tabletPortrait {
+    left: 25%;
+  }
+
+  @include laptop {
+    left: 20%;
+  }
+}

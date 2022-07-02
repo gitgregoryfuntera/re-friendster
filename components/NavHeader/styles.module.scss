@@ -1,0 +1,62 @@
+@use "../../styles/font-sizes" as fontSize;
+@use "../../styles/colors.scss" as colors;
+.navigationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background: colors.$neutralWhite;
+  .logoContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    h1 {
+      padding: 1rem;
+      font-size: fontSize.$large;
+    }
+    span {
+      position: relative;
+      padding: 0.5rem;
+      #logo {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    }
+    // Mobile
+    .navLogoContainerMobile {
+      padding: 1rem;
+    }
+  }
+
+  // Desktop
+  .navActionsContainer {
+    .navLink {
+      display: inline-block;
+      padding: 1rem;
+      a {
+        font-weight: 800;
+      }
+      span {
+        padding: 0.5rem;
+      }
+    }
+    .navLink:hover {
+      cursor: pointer;
+    }
+  }
+  // Mobile
+  .navActionContainerMobile {
+    padding: 1rem;
+    button {
+      all: unset;
+      cursor: pointer;
+    }
+  }
+}

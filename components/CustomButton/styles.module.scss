@@ -1,0 +1,11 @@
+.customButton {
+    button {
+        all: unset;
+        &.solid {
+            background-color: red;
+        }
+    }
+    :hover {
+        cursor: pointer;
+    }
+}

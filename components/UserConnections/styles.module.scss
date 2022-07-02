@@ -1,0 +1,17 @@
+.userConnectionsContainer {
+  width: 100%;
+  height: 300px;
+  .title {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .connections {
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,14 @@
+.profilePictureContainer {
+  position: relative;
+  .imageContainer {
+    position: absolute;
+    left: 5%;
+    transform: translate(0, -45%);
+    width: 7.5rem;
+    img {
+      border: 10px solid white;
+      width: 100%;
+    }
+  }
+}
+

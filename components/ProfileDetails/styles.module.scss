@@ -1,0 +1,61 @@
+@use "../../styles/media-queries.scss" as *;
+
+.profileDetailsContainer {
+  position: absolute;
+  width: 100%;
+  transform: translate(0, -130%);
+  .detailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .spacer {
+      width: 7.1875rem;
+      height: 3.75rem;
+    }
+    .details {
+      display: flex;
+      width: 54%;
+      overflow-x: auto;
+      margin-left: 1.875rem;
+      .item {
+        margin-right: 1rem;
+        p {
+          width: 6.25rem;
+          max-width: 9.375rem;
+        }
+      }
+    }
+    .details::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Media Queries
+  @include phoneLandscape {
+    .detailsContainer {
+      .spacer {
+        width: 8rem;
+      }
+
+      .details {
+        width: 70%;
+      }
+    }
+  }
+
+  @include tabletPortrait {
+    .detailsContainer {
+      .spacer {
+        width: 8.5rem;
+      }
+    }
+  }
+
+  @include laptop {
+    .detailsContainer {
+      .spacer {
+        width: 9.5rem;
+      }
+    }
+  }
+}

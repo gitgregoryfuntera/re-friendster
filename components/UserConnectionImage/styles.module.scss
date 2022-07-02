@@ -1,0 +1,14 @@
+.userImageContainer {
+  padding: 0.4rem;
+  .userImageWrapper {
+    padding: 0.5rem;
+    border: 2px solid green;
+    border-radius: 60px;
+    img {
+      position: relative;
+      top: 2px;
+      left: 1px;
+      border-radius: 60px;
+    }
+  }
+}

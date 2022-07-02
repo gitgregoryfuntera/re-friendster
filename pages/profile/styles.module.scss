@@ -1,0 +1,28 @@
+@use "../../styles/media-queries.scss" as *;
+
+.profileHeaderContainer {
+  position: relative;
+}
+
+.mainContentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  .testimonialsContainer {
+    width: 100%;
+  }
+
+  .userConnectionsContainer {
+    width: 100%;
+  }
+
+  @include laptop {
+    .testimonialsContainer {
+      width: 615px;
+    }
+
+    .userConnectionsContainer {
+      width: 409px;
+    }
+  }
+}

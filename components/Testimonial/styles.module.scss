@@ -1,0 +1,40 @@
+@use "../../styles/media-queries.scss" as *;
+
+.testimonialContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .imageContainer {
+    img {
+      border-radius: 60px;
+      position: relative;
+      left: 8px;
+    }
+  }
+  .textContainer {
+    width: 100%;
+    padding-inline: 1rem;
+    .textHeader {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .textContent {
+      text-align: justify;
+      padding-top: 1rem;
+    }
+  }
+
+  @include laptop {
+    .imageContainer {
+      img {
+        position: static;
+      }
+    }
+    .textContainer {
+      width: 500px;
+    }
+  }
+}
