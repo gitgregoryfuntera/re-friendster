@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import NavHeader from "../NavHeader";
 
 type LayoutWrapperProps = {
@@ -5,6 +6,15 @@ type LayoutWrapperProps = {
 };
 
 const LayoutWrapper = ({ children }: LayoutWrapperProps) => {
+  const [showChild, setShowChild] = useState(false);
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+
+  if (!showChild) {
+    return <></>
+  }
+
   return (
     <>
       <NavHeader />
