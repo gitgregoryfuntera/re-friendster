@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./styles.module.scss";
+import Link from "next/link";
 
 type CustomButtonProps = {
   children: React.ReactNode;
@@ -18,8 +19,10 @@ const CustomButton = ({
 }: CustomButtonProps): JSX.Element => {
   if (href) {
     return (
-      <div  className={`${className}`}>
-        <a>{children}</a>
+      <div className={`${className}`}>
+        <Link href={href}>
+          <a>{children}</a>
+        </Link>
       </div>
     );
   }
