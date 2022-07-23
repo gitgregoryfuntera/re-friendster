@@ -31,7 +31,7 @@ const NavHeaderModal = ({ show, toggleMenu }: NavHeaderModalProps) => {
             </CustomButton>
           </li>
           <li>
-            <CustomButton href="/account" className={classes.navLink}>
+            <CustomButton href="/profile" className={classes.navLink}>
               Account{" "}
               <span>
                 <IoPersonSharp />
